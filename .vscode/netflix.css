@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    position: absolute;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+}
+
+.signin-btn {
+    background-color: #e50914;
+    color: white;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to top, rgba(173, 33, 33, 0.8), rgba(21, 20, 20, 0.4)),
+    url('netflix.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content h3 {
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+}
+
+.email-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.email-box input {
+    padding: 12px;
+    width: 300px;
+    border: none;
+    outline: none;
+}
+
+.email-box button {
+    padding: 12px 20px;
+    background-color: #e50914;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Movies Section */
+.movies {
+    padding: 50px;
+}
+
+.movies h2 {
+    margin-bottom: 15px;
+}
+
+.movie-row {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    margin-bottom: 40px;
+}
+
+.movie-row img {
+    width: 200px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.movie-row img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+    background-color: #3a2d2d;
+    padding: 40px 50px;
+    text-align: center;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: #757575;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+copyright {
+    font-size: 14px;
+    color: #757575;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .email-box input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .email-box button {
+        width: 100%;
+    }
+
+    .movies {
+        padding: 20px;
+    }
+}

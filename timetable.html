@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Haunted Exam Time Table</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Horror Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap" rel="stylesheet">
+
+<style>
+/* 👻 GHOST CURSOR */
+body {
+    input {
+  input {
+  cursor: url("https://cur.cursors-4u.net/others/oth-1/oth87.cur"), auto;
+}
+
+}
+
+}
+
+/* BODY */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #2b0000, #000);
+    font-family: 'Creepster', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #f5f5f5;
+}
+
+/* 🩸 DRIPPING BLOOD EFFECT */
+.blood-drip {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    background: #8b0000;
+    clip-path: polygon(
+        0 0, 100% 0, 100% 50%,
+        95% 70%, 90% 55%, 85% 80%, 80% 60%,
+        75% 85%, 70% 55%, 65% 78%, 60% 58%,
+        55% 82%, 50% 60%, 45% 85%, 40% 58%,
+        35% 80%, 30% 55%, 25% 75%, 20% 60%,
+        15% 80%, 10% 55%, 5% 70%, 0 50%
+    );
+    box-shadow: 0 10px 30px rgba(255,0,0,0.6);
+    z-index: 1;
+}
+
+/* MAIN CARD */
+.timetable {
+    width: 90%;
+    max-width: 1000px;
+    background: rgba(0,0,0,0.85);
+    border: 2px solid #8b0000;
+    border-radius: 15px;
+    box-shadow: 0 0 50px #8b0000;
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+/* TITLE */
+h1 {
+    text-align: center;
+    font-family: 'Nosifer', cursive;
+    color: #ff1a1a;
+    letter-spacing: 4px;
+    text-shadow: 0 0 15px red;
+    animation: flicker 2s infinite;
+}
+
+/* FLICKER */
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+    20%, 24%, 55% { opacity: 0.4; }
+}
+
+/* DETAILS */
+.details {
+    text-align: center;
+    font-size: 18px;
+    color: #ffcccc;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    font-size: 18px;
+}
+
+th, td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #660000;
+}
+
+th {
+    background: linear-gradient(to right, #660000, #330000);
+    color: #fff;
+    text-shadow: 0 0 6px red;
+}
+
+tr:hover {
+    background: rgba(255,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* 🕯️ FLOATING CANDLES */
+.candle {
+    position: absolute;
+    width: 12px;
+    height: 40px;
+    background: #fff2cc;
+    border-radius: 5px;
+    bottom: -50px;
+    animation: floatUp 12s linear infinite;
+}
+
+.candle::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 14px;
+    background: radial-gradient(circle, yellow, orange, red);
+    border-radius: 50%;
+    animation: flame 0.3s infinite alternate;
+}
+
+/* CANDLE ANIMATIONS */
+@keyframes floatUp {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-120vh); opacity: 0; }
+}
+
+@keyframes flame {
+    from { transform: translateX(-50%) scale(1); }
+    to { transform: translateX(-50%) scale(1.2); }
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🩸 BLOOD DRIP -->
+<div class="blood-drip"></div>
+
+<!-- 🕯️ FLOATING CANDLES -->
+<div class="candle" style="left:10%; animation-delay:0s;"></div>
+<div class="candle" style="left:25%; animation-delay:4s;"></div>
+<div class="candle" style="left:40%; animation-delay:2s;"></div>
+<div class="candle" style="left:60%; animation-delay:6s;"></div>
+<div class="candle" style="left:75%; animation-delay:3s;"></div>
+<div class="candle" style="left:90%; animation-delay:5s;"></div>
+
+<div class="timetable">
+    <h1>☠ EXAM TIME TABLE ☠</h1>
+
+    <div class="details">
+        <p>Class / Semester: <span style="color:#ff1a1a">ECE-1</span></p>
+        <p>Exam Time: <span style="color:#ff1a1a">10:00 AM – 12:00 PM</span></p>
+    </div>
+
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Day</th>
+            <th>Subject</th>
+            <th>Time</th>
+        </tr>
+        <tr><td>24/12/2025</td><td>Wednesday</td><td>Mathematics</td><td>10:00–12:00</td></tr>
+        <tr><td>26/12/2025</td><td>Friday</td><td>AI</td><td>10:00–12:00</td></tr>
+        <tr><td>29/12/2025</td><td>Monday</td><td>Electrical</td><td>10:00–12:00</td></tr>
+        <tr><td>02/01/2026</td><td>Friday</td><td>Data Structures</td><td>10:00–12:00</td></tr>
+        <tr><td>05/01/2026</td><td>Monday</td><td>Applied Physics</td><td>10:00–12:00</td></tr>
+        <tr><td>08/01/2026</td><td>Thursday</td><td>EVS</td><td>10:00–12:00</td></tr>
+    </table>
+
+    <footer>👁️‍🗨️ Enter the exam hall… if you dare</footer>
+</div>
+
+</body>
+</html>
